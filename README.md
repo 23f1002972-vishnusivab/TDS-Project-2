@@ -140,7 +140,7 @@ Run the Flask Application
 If you're running the project **locally**, make sure to:
 - ✅ **Uncomment** the following line in `app.py`:
   ```python
-  app.run(debug=1)
+  app.run(port=5000, debug=True)
   ```
 - ❌ Comment out the production deployment line:
   ```python
@@ -199,5 +199,6 @@ This project uses the MIT License as required.
 
 Vishnu Siva  
 LLM Analysis Quiz Solver
+
 
 
