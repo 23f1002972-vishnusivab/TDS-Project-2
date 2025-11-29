@@ -10,6 +10,7 @@ import pdfplumber
 from dotenv import load_dotenv
 from playwright.sync_api import sync_playwright, TimeoutError as PWTimeout
 import google.generativeai as genai
+from waitress import serve
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
@@ -287,4 +288,6 @@ def quiz_endpoint():
 
 
 if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+    #app.run(port=5000, debug=True)
+    serve(app, host="0.0.0.0", port=8000)
+
